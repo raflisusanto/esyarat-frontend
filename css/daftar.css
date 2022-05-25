@@ -1,0 +1,846 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap");
+body {
+  background: #FAFAFA;
+  margin: 0;
+  font-family: 'Nunito', 'Inter';
+}
+
+div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5.5em;
+  margin-bottom: 5.5em;
+}
+
+div.left-col .card-container {
+  position: relative;
+  margin-left: 3em;
+}
+
+div.left-col .card-container div.overlay {
+  position: absolute;
+  border-radius: 18px;
+  background: #2b2b2b;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2b2b2b), color-stop(44%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, #2b2b2b 0%, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+div.left-col .card-container video.prev {
+  width: 40em;
+  height: 52em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 18px;
+}
+
+div.left-col .card-container div.text-card-container .text-content {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  position: absolute;
+  z-index: 3;
+  bottom: 150px;
+  left: 125px;
+}
+
+div.left-col .card-container div.text-card-container .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div.left-col .card-container div.text-card-container .dot1 {
+  height: 10px;
+  width: 40px;
+  background-color: #717171;
+  border-radius: 100px;
+  margin-right: .5em;
+  position: absolute;
+  top: 47em;
+  left: 15.9em;
+  z-index: 4;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+div.left-col .card-container div.text-card-container .dot2 {
+  height: 10px;
+  width: 40px;
+  background-color: #717171;
+  border-radius: 100px;
+  margin-right: .5em;
+  position: absolute;
+  top: 47em;
+  left: 19.2em;
+  z-index: 4;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+div.left-col .card-container div.text-card-container .dot3 {
+  height: 10px;
+  width: 40px;
+  background-color: #717171;
+  border-radius: 100px;
+  margin-right: .5em;
+  position: absolute;
+  top: 47em;
+  left: 22.5em;
+  z-index: 4;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+div.left-col .card-container div.text-card-container .active {
+  background-color: white;
+}
+
+div.right-col {
+  display: block;
+  margin-right: 5em;
+}
+
+div.right-col p.ada-akun {
+  font-family: 'Inter';
+  text-align: center;
+  color: #464646;
+  /* visited link */
+  /* mouse over link */
+}
+
+div.right-col p.ada-akun a {
+  font-weight: 800;
+}
+
+div.right-col p.ada-akun a:link {
+  color: #464646;
+}
+
+div.right-col p.ada-akun a:visited {
+  color: #464646;
+}
+
+div.right-col p.ada-akun a:hover {
+  color: gray;
+}
+
+div.right-col a.logo img {
+  image-rendering: -webkit-optimize-contrast;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+}
+
+div.right-col h1.welcome {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+div.right-col div.survey-container {
+  background-color: white;
+  padding: 16px 30px;
+  border-radius: 8px;
+  margin-bottom: 3em;
+}
+
+div.right-col div.survey-container h1.judul {
+  text-align: center;
+  font-size: 24;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+}
+
+div.right-col div.survey-container .form-control:hover {
+  border: 1px solid #18625D;
+  color: #18625D;
+}
+
+div.right-col div.survey-container .form-control:hover input ~ .checkmark {
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  border: 2px solid #18625D;
+  background-color: #D2E4E3;
+}
+
+div.right-col div.survey-container .form-control {
+  font-family: 'Nunito';
+  font-weight: 600;
+  font-size: 18px;
+  display: block;
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #E2E2E2;
+  border-radius: 5px;
+  padding: 12px 18px;
+  /* When the radio button is checked, add color background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+
+div.right-col div.survey-container .form-control span.inv {
+  opacity: 0;
+}
+
+div.right-col div.survey-container .form-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+div.right-col div.survey-container .form-control .checkmark {
+  position: absolute;
+  top: .7em;
+  left: 19.9em;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #B4B4B4;
+}
+
+div.right-col div.survey-container .form-control input:checked ~ .checkmark {
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  background-color: #D2E4E3;
+  border: 2px solid #1F7973;
+}
+
+div.right-col div.survey-container .form-control .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+div.right-col div.survey-container .form-control input:checked ~ .checkmark:after {
+  display: block;
+}
+
+div.right-col div.survey-container .form-control .checkmark:after {
+  top: 3.5px;
+  left: 3.5px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #1F7973;
+}
+
+div.right-col div.survey-container input#btn-selanjutnya {
+  color: white;
+  background-color: #1F7973;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Inter';
+  border: none;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.right-col div.daftar-container {
+  display: none;
+  background-color: white;
+  padding: 16px 30px;
+  border-radius: 8px;
+  margin-bottom: 3em;
+  position: relative;
+}
+
+div.right-col div.daftar-container p {
+  color: #898989;
+}
+
+div.right-col div.daftar-container p.note {
+  margin-top: 0;
+}
+
+div.right-col div.daftar-container p.atau {
+  margin: .5em;
+  text-align: center;
+}
+
+div.right-col div.daftar-container .form-field label {
+  width: 25em;
+  display: block;
+  font-size: 15px;
+  color: #898989;
+}
+
+div.right-col div.daftar-container .form-field input {
+  display: inline-block;
+  background-color: #FAFAFA;
+  border: 1px solid #DEDEDE;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100%;
+  padding: 15px 16px;
+  margin: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.right-col div.daftar-container .form-field ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.daftar-container .form-field :-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.daftar-container .form-field ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.daftar-container .form-field ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.daftar-container .form-field input.indo {
+  padding-left: 5em;
+  background-image: url("../img/62.svg");
+  background-repeat: no-repeat;
+  background-position-x: 1em;
+  background-position-y: .8em;
+}
+
+div.right-col div.daftar-container input#btn-send-verf {
+  color: white;
+  background-color: #1F7973;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Inter';
+  border: none;
+  margin-top: 1em;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.right-col div.daftar-container input#btn-reg-google {
+  font-family: 'Inter';
+  font-size: 15px;
+  font-weight: 400;
+  color: #464646;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 24px 15px 50px;
+  image-rendering: -webkit-optimize-contrast;
+  background: url("../img/google-logo.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-position-x: 6em;
+  background-color: #FFFFFF;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.right-col div.veri-container {
+  display: none;
+  background-color: white;
+  padding: 16px 30px;
+  border-radius: 8px;
+  margin-bottom: 3em;
+  position: relative;
+  width: 22em;
+}
+
+div.right-col div.veri-container h4 {
+  text-align: center;
+  font-weight: 500;
+  margin-top: .5em;
+  margin-bottom: 0;
+}
+
+div.right-col div.veri-container h4.phone-num {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2.3em;
+}
+
+div.right-col div.veri-container div.verf-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+div.right-col div.veri-container div.verf-field input#last-field {
+  margin-right: 0;
+}
+
+div.right-col div.veri-container div.verf-field input.code-input {
+  font-size: 1.5em;
+  width: 1em;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 1em;
+          flex: 1 0 1em;
+}
+
+div.right-col div.veri-container div.verf-field input[type='submit'] {
+  margin-left: auto;
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+div.right-col div.veri-container div.verf-field input[type='submit']:hover {
+  background: #FAFAFA;
+}
+
+div.right-col div.veri-container div.verf-field input {
+  padding: 13px 12px;
+  margin-right: .4em;
+  border-radius: 8px;
+  color: #898989;
+  background: #FAFAFA;
+  border: 1px solid #E0E0E0;
+}
+
+div.right-col div.veri-container div.verf-field input:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+div.right-col div.veri-container div.verf-field input:focus {
+  outline: none;
+  border: 1px solid #18625D;
+  color: #18625D;
+  background: #D2E4E3;
+}
+
+div.right-col div.veri-container div.verf-field ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.veri-container div.verf-field :-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.veri-container div.verf-field ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.veri-container div.verf-field ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.veri-container input#submi-code-verf {
+  color: white;
+  background-color: #1F7973;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Inter';
+  border: none;
+  margin-top: 2em;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.right-col div.veri-container input#resend-verf {
+  color: #8E8E8E;
+  background-color: #F2F2F2;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  margin-top: .5em;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.right-col div.pass-container {
+  display: none;
+  background-color: white;
+  padding: 16px 30px;
+  border-radius: 8px;
+  margin-bottom: 3em;
+  position: relative;
+  width: 22em;
+}
+
+div.right-col div.pass-container input {
+  display: inline-block;
+  background-color: #FAFAFA;
+  border: 1px solid #DEDEDE;
+  border-radius: 8px;
+  color: #898989;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Inter';
+  width: 100%;
+  padding: 15px 16px;
+  margin: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.right-col div.pass-container ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.pass-container :-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.pass-container ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.pass-container ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.pass-container p {
+  color: #898989;
+  padding-left: 2em;
+}
+
+div.right-col div.pass-container input#btn-make-pass {
+  color: white;
+  background-color: #1F7973;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  margin-top: 2em;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.right-col div.pass-container .valid {
+  background-image: url("../img/check-valid.png");
+  background-repeat: no-repeat;
+  background-position-x: .1em;
+}
+
+div.right-col div.pass-container .invalid {
+  background-image: url("../img/check-invalid.png");
+  background-repeat: no-repeat;
+  background-position-x: .1em;
+}
+
+div.right-col div.feedback {
+  display: none;
+  text-align: center;
+}
+
+div.right-col div.feedback h1 {
+  font-size: 32px;
+}
+
+div.right-col div.feedback p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+div.right-col div.feedback button {
+  background-color: #18625D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Inter';
+  border-radius: 5px;
+  width: 15em;
+  margin-top: 2em;
+}
+
+div.right-col div.feedback button a {
+  text-decoration: none;
+  color: white;
+}
+
+div.bottom-bar {
+  background-color: white;
+  bottom: 0;
+  width: 100%;
+}
+
+div.bottom-bar .bot-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  padding: 28px 24px;
+}
+
+div.bottom-bar .bot-container .left-col-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  margin-left: 2em;
+}
+
+div.bottom-bar .bot-container .left-col-copy .logo {
+  margin-right: 1.5em;
+}
+
+div.bottom-bar .bot-container .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 2em;
+}
+
+div.bottom-bar .bot-container a {
+  margin-right: 1em;
+  text-decoration: none;
+}
+
+div.bottom-bar .bot-container img {
+  image-rendering: -webkit-optimize-contrast;
+  margin-right: .6em;
+}
+
+div.bottom-bar .bot-container div.sep {
+  margin-right: 1em;
+  color: #D9D9D9;
+}
+
+@media only screen and (min-width: 1500px) {
+  .container {
+    width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  div.left-col {
+    display: none;
+  }
+  div.right-col {
+    margin-left: 5em;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .bot-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bot-container a.logo {
+    margin-bottom: .3em;
+  }
+  .bot-container .left-col-copy {
+    margin-bottom: 1.9em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bot-container .socials {
+    margin-left: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  div.container {
+    margin-top: 3em;
+  }
+  div.right-col {
+    margin: 0 auto;
+  }
+  div.right-col h1.welcome {
+    margin-top: 0;
+    font-size: 22px;
+  }
+  div.right-col a.logo img {
+    margin-bottom: 2em;
+  }
+  div.right-col div.daftar-card h1 {
+    font-size: 18px;
+  }
+  div.right-col div.daftar-card div.survey-container {
+    margin: 1em;
+  }
+  div.right-col div.daftar-card div.survey-container .form-control {
+    font-size: 14px;
+  }
+  div.right-col div.daftar-card div.survey-container .form-control .checkmark {
+    left: 19.8em;
+  }
+  div.right-col div.daftar-card div.feedback h1.feedback {
+    font-size: 20px;
+  }
+  div.right-col div.daftar-card div.feedback p.feedback {
+    font-size: 16px;
+  }
+  .bot-container .left-col-copy {
+    color: #929292;
+    margin-bottom: 2.5em;
+  }
+  .bot-container .left-col-copy div.copy {
+    margin-right: 1.5em;
+    font-size: 15px;
+    text-align: center;
+  }
+  .bot-container .socials {
+    font-size: 14px;
+    margin-left: 3em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  div.right-col div.daftar-card div.daftar-container .form-field label {
+    width: 20em;
+  }
+  div.right-col div.daftar-card div.daftar-container input#btn-reg-google {
+    background-position-x: 3em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  div.right-col div.daftar-card div.pass-container {
+    width: 18.4em;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  div.right-col div.daftar-card div.survey-container .form-control .checkmark {
+    left: 19.5em;
+  }
+  div.right-col div.daftar-card div.veri-container {
+    width: 18.4em;
+  }
+  div.right-col div.daftar-card div.veri-container h4 {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  div.right-col div.daftar-card div.survey-container .form-control .checkmark {
+    left: 18.5em;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  div.right-col div.daftar-card div.survey-container .form-control .checkmark {
+    left: 17.5em;
+  }
+}
+/*# sourceMappingURL=daftar.css.map */

@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap");
+body {
+  background: #FAFAFA;
+  margin: 0;
+  font-family: 'Nunito', 'Inter';
+}
+
+div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5.5em;
+  margin-bottom: 5.5em;
+}
+
+div.left-col .card-container {
+  position: relative;
+  margin-left: 3em;
+}
+
+div.left-col .card-container div.overlay {
+  position: absolute;
+  border-radius: 18px;
+  background: #2b2b2b;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2b2b2b), color-stop(44%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, #2b2b2b 0%, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+div.left-col .card-container video.prev {
+  width: 40em;
+  height: 52em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 18px;
+}
+
+div.left-col .card-container div.text-card-container .text-content {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  position: absolute;
+  z-index: 3;
+  bottom: 150px;
+  left: 125px;
+}
+
+div.left-col .card-container div.text-card-container .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div.left-col .card-container div.text-card-container .dot1 {
+  height: 10px;
+  width: 40px;
+  background-color: #717171;
+  border-radius: 100px;
+  margin-right: .5em;
+  position: absolute;
+  top: 47em;
+  left: 15.9em;
+  z-index: 4;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+div.left-col .card-container div.text-card-container .dot2 {
+  height: 10px;
+  width: 40px;
+  background-color: #717171;
+  border-radius: 100px;
+  margin-right: .5em;
+  position: absolute;
+  top: 47em;
+  left: 19.2em;
+  z-index: 4;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+div.left-col .card-container div.text-card-container .dot3 {
+  height: 10px;
+  width: 40px;
+  background-color: #717171;
+  border-radius: 100px;
+  margin-right: .5em;
+  position: absolute;
+  top: 47em;
+  left: 22.5em;
+  z-index: 4;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+div.left-col .card-container div.text-card-container .active {
+  background-color: white;
+}
+
+div.right-col {
+  display: block;
+  margin-right: 5em;
+}
+
+div.right-col a.logo img {
+  image-rendering: -webkit-optimize-contrast;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+}
+
+div.right-col h1.welcome {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  padding: 1em;
+}
+
+div.right-col div.login-card {
+  background-color: white;
+  padding: 28px 24px;
+  border-radius: 8px;
+  margin-bottom: 3em;
+}
+
+div.right-col div.login-card .login-container {
+  position: relative;
+}
+
+div.right-col div.login-card .login-container .form-field label {
+  display: block;
+  font-size: 15px;
+  color: #898989;
+}
+
+div.right-col div.login-card .login-container .form-field input {
+  display: inline-block;
+  background-color: #FAFAFA;
+  border: 1px solid #DEDEDE;
+  border-radius: 8px;
+  color: #898989;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100%;
+  padding: 15px 16px;
+  margin: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.right-col div.login-card .login-container .form-field ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.login-card .login-container .form-field :-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.login-card .login-container .form-field ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.login-card .login-container .form-field ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1;
+  /* Firefox */
+}
+
+div.right-col div.login-card .login-container .form-field img#togglePass.togglePassword {
+  position: absolute;
+  cursor: pointer;
+  left: 22.5em;
+  bottom: 15em;
+}
+
+div.right-col div.login-card .login-container a.forgot-pass {
+  margin-left: 17em;
+  display: block;
+  text-decoration: none;
+  color: #8F8F8F;
+}
+
+div.right-col div.login-card input.btn-login {
+  color: white;
+  background-color: #1F7973;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  margin-top: 3em;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.right-col div.login-card input.btn-login-google {
+  font-family: 'Inter';
+  font-size: 15px;
+  font-weight: 400;
+  color: #464646;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 24px 15px 50px;
+  image-rendering: -webkit-optimize-contrast;
+  background: url("../img/google-logo.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-position-x: 6em;
+  background-color: #FFFFFF;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.right-col div.login-card p {
+  text-align: center;
+  color: #8f8f8f;
+}
+
+div.right-col p.btm-qna {
+  font-family: 'Inter';
+  text-align: center;
+  color: #464646;
+  /* visited link */
+  /* mouse over link */
+}
+
+div.right-col p.btm-qna a {
+  font-weight: 800;
+}
+
+div.right-col p.btm-qna a:link {
+  color: #464646;
+}
+
+div.right-col p.btm-qna a:visited {
+  color: #464646;
+}
+
+div.right-col p.btm-qna a:hover {
+  color: gray;
+}
+
+div.bottom-bar {
+  background-color: white;
+  bottom: 0;
+  width: 100%;
+}
+
+div.bottom-bar .bot-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  padding: 28px 24px;
+}
+
+div.bottom-bar .bot-container .left-col-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  margin-left: 2em;
+}
+
+div.bottom-bar .bot-container .left-col-copy .logo {
+  margin-right: 1.5em;
+}
+
+div.bottom-bar .bot-container .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 2em;
+}
+
+div.bottom-bar .bot-container a {
+  margin-right: 1em;
+  text-decoration: none;
+}
+
+div.bottom-bar .bot-container img {
+  image-rendering: -webkit-optimize-contrast;
+  margin-right: .6em;
+}
+
+div.bottom-bar .bot-container div.sep {
+  margin-right: 1em;
+  color: #D9D9D9;
+}
+
+@media only screen and (min-width: 1500px) {
+  .container {
+    width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  div.left-col {
+    display: none;
+  }
+  div.right-col {
+    margin-left: 5em;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .bot-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bot-container a.logo {
+    margin-bottom: .3em;
+  }
+  .bot-container .left-col-copy {
+    margin-bottom: 1.9em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bot-container .socials {
+    margin-left: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  div.container {
+    margin-top: 3em;
+  }
+  div.right-col {
+    margin: 0 auto;
+  }
+  div.right-col h1.welcome {
+    margin-top: 0;
+    font-size: 22px;
+  }
+  div.right-col a.logo img {
+    margin-bottom: 0;
+  }
+  div.right-col div.login-card div.login-container div.form-field img#togglePass.togglePassword {
+    left: 17em;
+  }
+  div.right-col div.login-card div.login-container a.forgot-pass {
+    margin-left: 12em;
+  }
+  div.right-col div.login-card div.login-container input.btn-login-google {
+    background-position-x: 3.6em;
+  }
+  .bot-container .left-col-copy {
+    color: #929292;
+    margin-bottom: 2.5em;
+  }
+  .bot-container .left-col-copy div.copy {
+    margin-right: 1.5em;
+    font-size: 15px;
+    text-align: center;
+  }
+  .bot-container .socials {
+    font-size: 14px;
+    margin-left: 3em;
+  }
+}
+/*# sourceMappingURL=login.css.map */
