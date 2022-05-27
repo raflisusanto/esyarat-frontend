@@ -9,13 +9,16 @@ let letter = document.getElementById("num-cap-letter");
 
 function checkInputEmail() {
     let emailInput = document.querySelectorAll('#email-form input[name="text"]');
+    let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    // Check data daftar here
-    if (emailInput[0].value == 'rafli') {
+    // Check data email here
+    if (emailInput[0].value.match(emailRegex)) {
         // Go to pass creation
         fadeToForgotPass();
     } else {
         // Aktifin border merah or sumthin
+        emailInput[0].style.border = '1px solid #F14848';
+        alert("Email tidak valid");
         return false;
     }
 }
@@ -49,10 +52,12 @@ function checkForgotPass() {
 
     if (passChangeInput[0].value == passChangeInput[1].value && letter.classList.contains("valid") && 
     length.classList.contains("valid")) {
-        console.log(passChangeInput[0].value);
         fadeToFeedback();
     } else {
         // Add red border
+        passChangeInput[0].style.border = '1px solid #F14848';
+        passChangeInput[1].style.border = '1px solid #F14848';
+        alert("Email tidak valid");
         return false;
     }
 }

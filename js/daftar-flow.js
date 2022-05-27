@@ -1,3 +1,5 @@
+let surveyRadio = document.getElementById('')
+
 let surveySubmit = document.getElementById('btn-selanjutnya');
 surveySubmit.addEventListener('click', checkInputSurvey);
 
@@ -10,6 +12,7 @@ codeSubmit.addEventListener('click', checkInputCode);
 let makePassSubmit = document.getElementById('btn-make-pass');
 makePassSubmit.addEventListener('click', checkInputPass);
 
+// Trigger function for verification code form field
 verfCard();
 
 let length = document.getElementById("length");
@@ -22,8 +25,6 @@ function checkInputSurvey() {
         // Aktifin border merah or sumthin
         return false;
     } else {
-        console.log(surveyInput[0].value);
-
         // Go to daftar card
         fadeToDaftar();
     }
@@ -31,21 +32,20 @@ function checkInputSurvey() {
 
 function checkInputDaftar() {
     let daftarInput = document.querySelectorAll('#daftar-form input[name="text"]');
+    let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let phoneRegex = /^(\+62|62)?[\s-]?0?8[1-9]{1}\d{1}[\s-]?\d{4}[\s-]?\d{2,5}$/;
 
     // Check data daftar here
-    if (daftarInput[0].value == 'rafli' && daftarInput[1].value == 'rafli' && daftarInput[2].value == 'rafli') {
-        const user = {
-            [daftarInput[0].id] : daftarInput[0].value,
-            [daftarInput[1].id] : daftarInput[1].value,
-            [daftarInput[2].id] : daftarInput[2].value,
-        };
-
-        console.log(user);
-
+    if (daftarInput[0].value != "" && daftarInput[1].value.match(emailRegex) 
+    && daftarInput[2].value.match(phoneRegex)) {
         // Go to verification card
         fadeToCode();
     } else {
         // Aktifin border merah or sumthin
+        daftarInput[0].style.border = '1px solid #F14848';
+        daftarInput[1].style.border = '1px solid #F14848';
+        daftarInput[2].style.border = '1px solid #F14848';
+        alert("Input tidak valid");
         return false;
     }
 }
@@ -78,26 +78,30 @@ function verfCard() {
     })
 }
 
-// On submit example verf code
+// On submit click, validate input
 function checkInputCode() {
+    codeField = document.querySelectorAll('#verf-form input[name="code"]');
     const code = [...document.querySelectorAll('#verf-form input')]
         .filter(({name})=>name)
         .map(({value})=>value)
         .join('')
 
     if (code == '12345') {
-        console.log(code);
         fadeToPass();
     } else {
         // Add red border
+        for (let i = 0; i < codeField.length; i++) {
+            codeField[i].style.border = '1px solid #F14848';
+        }
+        alert("Kode salah silahkan input kembali");
         return false;
     }
 }
 
-// Checking Pass Validation
+// ## Checking Pass Validation ##
 let myInput = document.getElementById("id-make-pass");
 
-// Check here (example only)
+// Check here
 myInput.onkeyup = function() {
     let upperCaseLetters = /[A-Z]/g;
     let lowerCaseLetters = /[a-z]/g;
@@ -117,16 +121,18 @@ myInput.onkeyup = function() {
 function checkInputPass() {
     let passInput = document.querySelectorAll('#pass-form input[name="text"]');
 
-    if (passChangeInput == undefined) {
+    if (passInput == undefined) {
         return false;
     }
 
     if (passInput[0].value == passInput[1].value && letter.classList.contains("valid") && 
     length.classList.contains("valid")) {
-        console.log(passInput[0].value);
         fadeToFeedback();
     } else {
         // Add red border
+        passInput[0].style.border = '1px solid #F14848';
+        passInput[1].style.border = '1px solid #F14848';
+        alert("Password belum valid");
         return false;
     }
 }

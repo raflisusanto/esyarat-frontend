@@ -134,7 +134,7 @@ div.right-col {
 }
 
 div.right-col p.ingat-pass {
-  font-family: 'Inter';
+  font-family: 'Nunito';
   text-align: center;
   color: #464646;
   /* visited link */
@@ -202,10 +202,22 @@ div.right-col div.forgot-pass-card div.forgot-pass-container .form-field input#i
           box-sizing: border-box;
 }
 
+div.right-col div.forgot-pass-card div.forgot-pass-container .form-field input#id-email:focus {
+  outline: none;
+  border: 1px solid #18625D;
+  color: #18625D;
+  background: #EDF8F7;
+  box-shadow: 0px .3px 0px 4px #B4D2D0;
+  -webkit-box-shadow: 0px .3px 0px 4px #B4D2D0;
+  -moz-box-shadow: 0px .3px 0px 4px #B4D2D0;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
 div.right-col div.forgot-pass-card div.forgot-pass-container .form-field input#btn-send-email {
   color: white;
   background-color: #1F7973;
-  font-family: 'Inter';
+  font-family: 'Nunito';
   font-size: 15px;
   font-weight: 500;
   border: none;
@@ -264,12 +276,24 @@ div.right-col div.forgot-pass-card div.pass-container input {
   color: #898989;
   font-size: 15px;
   font-weight: 500;
-  font-family: 'Inter';
+  font-family: 'Nunito';
   width: 100%;
   padding: 15px 16px;
   margin: 10px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+div.right-col div.forgot-pass-card div.pass-container input:focus {
+  outline: none;
+  border: 1px solid #18625D;
+  color: #18625D;
+  background: #EDF8F7;
+  box-shadow: 0px .3px 0px 4px #B4D2D0;
+  -webkit-box-shadow: 0px .3px 0px 4px #B4D2D0;
+  -moz-box-shadow: 0px .3px 0px 4px #B4D2D0;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 div.right-col div.forgot-pass-card div.pass-container ::-webkit-input-placeholder {
@@ -354,7 +378,7 @@ div.right-col div.forgot-pass-card div.feedback button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  font-family: 'Inter';
+  font-family: 'Nunito';
   border-radius: 5px;
   width: 15em;
   margin-top: 2em;
@@ -366,7 +390,7 @@ div.right-col div.forgot-pass-card div.feedback button a {
 }
 
 div.right-col div.forgot-pass-card p.ingat-pass {
-  font-family: 'Inter';
+  font-family: 'Nunito';
   text-align: center;
   color: #464646;
   /* visited link */

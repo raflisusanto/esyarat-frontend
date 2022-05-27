@@ -154,7 +154,20 @@ div.right-col {
                     padding: 15px 16px;
                     margin: 10px 0;
                     box-sizing: border-box;
+
+                    &:focus {
+                        outline: none;
+                        border: 1px solid #18625D;
+                        color: #18625D;
+                        background: #EDF8F7;
+                        box-shadow: 0px .3px 0px 4px #B4D2D0;
+                        -webkit-box-shadow: 0px .3px 0px 4px #B4D2D0;
+                        -moz-box-shadow: 0px .3px 0px 4px #B4D2D0;
+                        transition-duration: 0.4s;
+                    }
                 }
+
+
 
                 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
                     color: #898989;
@@ -194,7 +207,7 @@ div.right-col {
         }
 
         input.btn-login-google {
-            font-family: 'Inter';
+            font-family: 'Nunito';
             font-size: 15px;
             font-weight: 400;
             color: #464646;
@@ -224,7 +237,7 @@ div.right-col {
     }
 
     p.btm-qna {
-        font-family: 'Inter';
+        font-family: 'Nunito';
         text-align: center;
         color: #464646;
         a {

@@ -111,7 +111,7 @@ div.right-col {
     display: block;
     margin-right: 5em;
     p.ada-akun {
-        font-family: 'Inter';
+        font-family: 'Nunito';
         text-align: center;
         color: #464646;
         a {
@@ -173,6 +173,7 @@ div.right-col {
             }
             border: 1px solid #18625D;
             color: #18625D;
+            transition-duration: 0.4s;
         }
         .form-control {
             font-family: 'Nunito';
@@ -189,6 +190,7 @@ div.right-col {
             -ms-user-select: none;
             user-select: none;
 
+            transition-duration: 0.4s;
             border: 1px solid #E2E2E2;
             border-radius: 5px;
             padding: 12px 18px;
@@ -212,6 +214,7 @@ div.right-col {
                 background-color: white;
                 border-radius: 50%;
                 border: 2px solid #B4B4B4;
+                transition-duration: 0.4s;
             }
 
             /* When the radio button is checked, add color background */
@@ -257,7 +260,7 @@ div.right-col {
             background-color: #1F7973;
             font-size: 15px;
             font-weight: 500;
-            font-family: 'Inter';
+            font-family: 'Nunito';
             border: none;
     
             margin-top: 2em;
@@ -311,6 +314,17 @@ div.right-col {
                 padding: 15px 16px;
                 margin: 10px 0;
                 box-sizing: border-box;
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid #18625D;
+                    color: #18625D;
+                    background: #EDF8F7;
+                    box-shadow: 0px .3px 0px 4px #B4D2D0;
+                    -webkit-box-shadow: 0px .3px 0px 4px #B4D2D0;
+                    -moz-box-shadow: 0px .3px 0px 4px #B4D2D0;
+                    transition-duration: 0.4s;
+                }
             }
 
             ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -333,7 +347,7 @@ div.right-col {
             background-color: #1F7973;
             font-size: 15px;
             font-weight: 500;
-            font-family: 'Inter';
+            font-family: 'Nunito';
             border: none;
 
             margin-top: 1em;
@@ -346,7 +360,7 @@ div.right-col {
         }
 
         input#btn-reg-google {
-            font-family: 'Inter';
+            font-family: 'Nunito';
             font-size: 15px;
             font-weight: 400;
             color: #464646;
@@ -434,7 +448,11 @@ div.right-col {
                     outline: none;
                     border: 1px solid #18625D;
                     color: #18625D;
-                    background: #D2E4E3;
+                    background: #EDF8F7;
+                    box-shadow: 0px .3px 0px 4px #B4D2D0;
+                    -webkit-box-shadow: 0px .3px 0px 4px #B4D2D0;
+                    -moz-box-shadow: 0px .3px 0px 4px #B4D2D0;
+                    transition-duration: 0.4s;;
                 }
             }
 
@@ -449,7 +467,7 @@ div.right-col {
             background-color: #1F7973;
             font-size: 15px;
             font-weight: 500;
-            font-family: 'Inter';
+            font-family: 'Nunito';
             border: none;
     
             margin-top: 2em;
@@ -495,12 +513,23 @@ div.right-col {
             color: #898989;
             font-size: 15px;
             font-weight: 500;
-            font-family: 'Inter';
+            font-family: 'Nunito';
 
             width: 100%;
             padding: 15px 16px;
             margin: 10px 0;
             box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border: 1px solid #18625D;
+                color: #18625D;
+                background: #EDF8F7;
+                box-shadow: 0px .3px 0px 4px #B4D2D0;
+                -webkit-box-shadow: 0px .3px 0px 4px #B4D2D0;
+                -moz-box-shadow: 0px .3px 0px 4px #B4D2D0;
+                transition-duration: 0.4s;
+            }
         }
 
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -563,7 +592,7 @@ div.right-col {
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            font-family: 'Inter';
+            font-family: 'Nunito';
             border-radius: 5px;
             width: 15em;
 
