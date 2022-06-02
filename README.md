@@ -1,2 +1,2 @@
 # esyarat-frontend
-Rafli side
+Project moved to gitlab, will update this repo when done
