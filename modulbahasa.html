@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esyarat</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/modulbahasa.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="wrapper">
+            <div class="mobile-nav">
+                <img id="mobile-cta" class="mobile-menu" src="img/hamburger.png" alt="Open Navigation" />
+                <a href=""><img id="mobile-logo" src="./img/logo.png" /></a>
+            </div>
+            
+            <nav>
+                <ul class="menu-left">
+                    <img id="mobile-exit" class="mobile-menu-exit" src="img/hamburger.png" alt="Close Navigation" />
+                    <a href="" id="logoDesktop"><img src="./img/logo.png" /></a>
+                    <li class="menu-item"><a href="home.html">Beranda</a></li>
+                    <li class="menu-item"><a class="active" href="modulbahasa.html">Modul Bahasa</a></li>
+                    <li class="menu-item"><a href="">Tentang Kami</a></li>
+                    <li class="menu-item"><a href="">Terms & Policy</a></li>
+                </ul>
+            </nav>
+
+            <ul class="menu">
+                <div class="wrapper-notif">
+                    <div class="notification_wrap">
+                        <div class="notification_icon">
+                            <img id="notif-bell-img" src="img/notif-bell.png" alt="Notification Icon" />
+                        </div>
+                        <div id="notif-content" class="dropdown">
+                            <div class="notif-title-container">
+                                <h1>Notification</h1>
+                            </div>
+                            <div class="notify_item">
+                                <div class="notify_img">
+                                    <img id="notifImg" src="img/notif-img-1.png" alt="profile_pic" />
+                                </div>
+                                <div class="notify_info">
+                                    <p id="notifDesc">Pembayaranmu untuk modul “Jawa Barat” belum dilunasi, segera lunasi sekarang</p>
+                                    <span class="notify_time" id="notifTime">Mar 20, 2022 at 10.20 AM</span>
+                                </div>
+                            </div>
+                            <div class="notify_item">
+                                <div class="notify_img">
+                                    <img id="notifImg" src="img/Logo-Green-BG.png" alt="profile_pic" />
+                                </div>
+                                <div class="notify_info">
+                                    <p id="notifDesc">Contoh notifikasi panjang banget gila bro oemji</p>
+                                    <span class="notify_time" id="notifTime">Mar 20, 2022 at 10.20 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper-profile">
+                    <div id="profile-icon" class="profile_wrap">
+                        <div class="profile_icon">
+                            <img id="profile-picture" src="img/profpic-profile.png" alt="Notification Icon" />
+                            <img id="dropdown-icon" src="img/dropdown.png" alt="" />
+                        </div>
+                        <div id="profile-dropdown" class="dropdown">
+                            <div class="prof-item" id="first-item">
+                                Profil Saya
+                            </div>
+                            <div class="prof-item" id="logout">
+                                Keluar Akun
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <!-- header -->
+
+    <section class="hero modul">
+        <div class="title-row">
+            <h1 class="mod-title">Modul Bahasa Isyarat</h1>
+            <!-- Search bar here -->
+            <div class="search-container">
+                <form action="" onsubmit="return false" class="search-form" id="search-form">
+                    <div class="search-field">
+                        <input type="text" name="text" id="id-search" placeholder="Cari modul bahasa" />
+                    </div>
+                    <input type="submit" id="search" hidden />
+                </form>  
+            </div>
+        </div>
+        <div class="container">
+            <div class="slider">
+                <div class="desc-row">
+                    <h2 class="desc">Provinsi DKI Jakarta, Jawa, dan Bali</h2>
+                    <div class="top-slider">
+                        <div class="swiper-button-next swiper-jab-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-jab-prev swiper-navBtn"></div>
+                    </div>
+                </div>
+                <div class="slide-container swiper">
+                    <div class="slide-content sldCtn-jab">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modul-second modul">
+        <div class="container">
+            <div class="slider">
+                <div class="desc-row">
+                    <h2 class="desc">Provinsi Sumatera</h2>
+                    <div class="top-slider">
+                        <div class="swiper-button-next swiper-sumatera-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-sumatera-prev swiper-navBtn"></div>
+                    </div>
+                </div>
+                <div class="slide-container swiper">
+                    <div class="slide-content sldCtn-sumatera">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                            <div id="modulCard" class="card swiper-slide" onclick="goToModul()">
+                                <img class="image" src="./img/monas.png"></br>
+        
+                                <p>Bahasa Isyarat</p>
+                                <div class="title">DKI Jakarta</div>
+                                <div class="title-price">Rp 120.000</div>
+                                <div class="level-modul">
+                                    <img class="lev-mod" src="./img/level-easy.png">
+                                    <p class="ket">Mudah</p>
+                                </div>
+                                <div class="user-level">
+                                    <img class="user-lev" src="./img/level-icon.png">
+                                    <p class="ket">30 Level</p>
+                                    <p class="sumModul">|</p>
+                                    <img class="modul" src="./img/modul-ico.png">
+                                    <p class="sumModul">3 Bab</p>
+                                </div>
+                                <div class="review">
+                                    <img src="./img/5-stars.png">
+                                    <p>(240 Ulasan)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-bar">
+        <div class="bot-container">
+            <div class="left-col-copy">
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="esyarat logo" />
+                </a>
+    
+                <div class="copy">© 2022 esyarat.com | site crafted by Sigma for Probation event</div>
+            </div>
+            
+            <div class="socials">
+                <img src="img/insta-logo.png" alt="insta logo" />
+                <a href="" class="facebook">Instagram</a>
+                <div class="sep"> | </div>
+
+                <img src="img/fb-logo.png" alt="fb logo" />
+                <a href="" class="facebook">Facebook</a>
+                <div class="sep"> | </div>
+
+                <img src="img/twitter-logo.png" alt="twtitter logo" />
+                <a href="" class="facebook">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/header.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/swiper.js"></script>
+    <script src="js/modulbahasa.js"></script>
+</body>
+</html>

@@ -39,6 +39,13 @@ div.left-col {
         }
     
         div.text-card-container {
+            .first {
+                margin-left:.5em
+            }
+
+            .third {
+                margin-left: 1em
+            }
             .text-content {
                 color: white;
                 font-size: 35px;
@@ -216,7 +223,6 @@ div.right-col {
         }
 
         div.pass-container {
-            display: none;
             background-color: white;
             padding: 16px 30px;
             border-radius: 8px;
@@ -302,6 +308,10 @@ div.right-col {
                 font-weight: 600;
             }
 
+            img {
+                margin: 2em;
+            }
+
             button {
                 background-color: #18625D;
                 border: none;
@@ -361,6 +371,10 @@ div.bottom-bar {
 
         padding: 28px 24px;
 
+        .copy {
+            color: #929292;
+        }
+
         .left-col-copy {
             display: flex;
             align-items: center;
@@ -380,6 +394,7 @@ div.bottom-bar {
         a {
             margin-right: 1em;
             text-decoration: none;
+            color: #5E5E5E;
         }
 
         img {
@@ -417,7 +432,7 @@ div.bottom-bar {
         display: flex;
         flex-direction: column;
         a.logo {
-            margin-bottom: .3em;
+            margin-bottom: 1em;
         }
         .left-col-copy {
             margin-bottom: 1.9em;
@@ -450,7 +465,7 @@ div.bottom-bar {
 
         div.forgot-pass-card {
             div.forgot-pass-container {
-                margin: 1em;
+                margin: 3em;
             }
 
             div.feedback {

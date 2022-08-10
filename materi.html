@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/materi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <title>esyarat</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="wrapper">
+            <div class="mobile-nav">
+                <img id="mobile-cta" class="mobile-menu" src="img/hamburger.png" alt="Open Navigation" />
+                <a href=""><img id="mobile-logo" src="./img/logo.png" /></a>
+            </div>
+            
+            <nav>
+                <ul class="menu-left">
+                    <img id="mobile-exit" class="mobile-menu-exit" src="img/hamburger.png" alt="Close Navigation" />
+                    <a href="" id="logoDesktop"><img src="./img/logo.png" /></a>
+                    <li class="menu-item"><a href="home.html">Beranda</a></li>
+                    <li class="menu-item"><a class="active" href="modulbahasa.html">Modul Bahasa</a></li>
+                    <li class="menu-item"><a href="">Tentang Kami</a></li>
+                    <li class="menu-item"><a href="">Terms & Policy</a></li>
+                </ul>
+            </nav>
+
+            <ul class="menu">
+                <div class="wrapper-notif">
+                    <div class="notification_wrap">
+                        <div class="notification_icon">
+                            <img id="notif-bell-img" src="img/notif-bell.png" alt="Notification Icon" />
+                        </div>
+                        <div id="notif-content" class="dropdown">
+                            <div class="notif-title-container">
+                                <h1>Notification</h1>
+                            </div>
+                            <div class="notify_item">
+                                <div class="notify_img">
+                                    <img id="notifImg" src="img/notif-img-1.png" alt="profile_pic" />
+                                </div>
+                                <div class="notify_info">
+                                    <p id="notifDesc">Pembayaranmu untuk modul “Jawa Barat” belum dilunasi, segera lunasi sekarang</p>
+                                    <span class="notify_time" id="notifTime">Mar 20, 2022 at 10.20 AM</span>
+                                </div>
+                            </div>
+                            <div class="notify_item">
+                                <div class="notify_img">
+                                    <img id="notifImg" src="img/Logo-Green-BG.png" alt="profile_pic" />
+                                </div>
+                                <div class="notify_info">
+                                    <p id="notifDesc">Contoh notifikasi panjang banget gila bro oemji</p>
+                                    <span class="notify_time" id="notifTime">Mar 20, 2022 at 10.20 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper-profile">
+                    <div id="profile-icon" class="profile_wrap">
+                        <div class="profile_icon">
+                            <img id="profile-picture" src="img/profpic-profile.png" alt="Notification Icon" />
+                            <img id="dropdown-icon" src="img/dropdown.png" alt="" />
+                        </div>
+                        <div id="profile-dropdown" class="dropdown">
+                            <div class="prof-item" id="first-item">
+                                Profil Saya
+                            </div>
+                            <div class="prof-item" id="logout">
+                                Keluar Akun
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- content -->
+    <div class="keluar">
+        <a href="#"><i class="fa-solid fa-arrow-left"></i> Keluar</a>
+    </div>
+    <div class="video-materi">
+        <div class="container">
+            <video id="glass" width="200" controls>
+                <source class="link" type="video/mp4" />
+            </video>
+        </div>
+        <div class="detail">
+            <div class="wrap-level">
+                <div class="level"></div>
+                <i class="fas fa-circle"></i>
+                <div class="bab"></div>
+            </div>
+            <div class="materi">
+                <div class="title"></div>
+                <div class="desc"></div>
+                <div id="numb">
+                    <button class="btn active">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn">4</button>
+                    <button class="quiz-btn"><img src="./img/quiz-ico.png" /></button>
+                </div>
+                <div class="tingkat-kesulitan">
+                    <p>Tingkat kesulitan: </p>
+                    <img class="icon-difficult" />
+                    <div class="kesulitan"></div>
+                </div>
+                <hr/>
+                <p>Detail Gerakan</p>
+                <img class="detail-gerakan">
+                <div class="navigation">
+                    <button class="prev">Sebelumnya</button>
+                    <button class="next">Sudah paham, lanjutkan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- content -->
+
+    <!-- footer -->
+    <div class="bottom-bar">
+        <div class="bot-container">
+            <div class="left-col-copy">
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="esyarat logo" />
+                </a>
+    
+                <div class="copy">© 2022 esyarat.com | site crafted by Sigma for Probation event</div>
+            </div>
+            
+            <div class="socials">
+                <img src="img/insta-logo.png" alt="insta logo" />
+                <a href="" class="facebook">Instagram</a>
+                <div class="sep"> | </div>
+
+                <img src="img/fb-logo.png" alt="fb logo" />
+                <a href="" class="facebook">Facebook</a>
+                <div class="sep"> | </div>
+
+                <img src="img/twitter-logo.png" alt="twtitter logo" />
+                <a href="" class="facebook">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <script type="text/javascript" src="js/header.js"></script>
+    <script src="./js/materi.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

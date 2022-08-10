@@ -1,2 +1,4 @@
 # esyarat-frontend
-Rafli side
+## Tech Stack: 
+HTML, CSS, JS Vanilla
+

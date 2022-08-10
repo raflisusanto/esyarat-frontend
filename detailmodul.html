@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esyarat</title>
+    <link rel="stylesheet" href="css/detailmodul.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="wrapper">
+            <div class="mobile-nav">
+                <img id="mobile-cta" class="mobile-menu" src="img/hamburger.png" alt="Open Navigation" />
+                <a href=""><img id="mobile-logo" src="./img/logo.png" /></a>
+            </div>
+            
+            <nav>
+                <ul class="menu-left">
+                    <img id="mobile-exit" class="mobile-menu-exit" src="img/hamburger.png" alt="Close Navigation" />
+                    <a href="" id="logoDesktop"><img src="./img/logo.png" /></a>
+                    <li class="menu-item"><a class="active" href="home.html">Beranda</a></li>
+                    <li class="menu-item"><a href="modulbahasa.html">Modul Bahasa</a></li>
+                    <li class="menu-item"><a href="">Tentang Kami</a></li>
+                    <li class="menu-item"><a href="">Terms & Policy</a></li>
+                </ul>
+            </nav>
+
+            <ul class="menu">
+                <div class="wrapper-notif">
+                    <div class="notification_wrap">
+                        <div class="notification_icon">
+                            <img id="notif-bell-img" src="img/notif-bell.png" alt="Notification Icon" />
+                        </div>
+                        <div id="notif-content" class="dropdown">
+                            <div class="notif-title-container">
+                                <h1>Notification</h1>
+                            </div>
+                            <div class="notify_item">
+                                <div class="notify_img">
+                                    <img id="notifImg" src="img/notif-img-1.png" alt="profile_pic" />
+                                </div>
+                                <div class="notify_info">
+                                    <p id="notifDesc">Pembayaranmu untuk modul “Jawa Barat” belum dilunasi, segera lunasi sekarang</p>
+                                    <span class="notify_time" id="notifTime">Mar 20, 2022 at 10.20 AM</span>
+                                </div>
+                            </div>
+                            <div class="notify_item">
+                                <div class="notify_img">
+                                    <img id="notifImg" src="img/Logo-Green-BG.png" alt="profile_pic" />
+                                </div>
+                                <div class="notify_info">
+                                    <p id="notifDesc">Contoh notifikasi panjang banget gila bro oemji</p>
+                                    <span class="notify_time" id="notifTime">Mar 20, 2022 at 10.20 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper-profile">
+                    <div id="profile-icon" class="profile_wrap">
+                        <div class="profile_icon">
+                            <img id="profile-picture" src="img/profpic-profile.png" alt="Notification Icon" />
+                            <img id="dropdown-icon" src="img/dropdown.png" alt="" />
+                        </div>
+                        <div id="profile-dropdown" class="dropdown">
+                            <div class="prof-item" id="first-item">
+                                Profil Saya
+                            </div>
+                            <div class="prof-item" id="logout">
+                                Keluar Akun
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <!-- header -->
+
+    <div id="overlay" onclick="toggleOverlayOff()"></div>
+    <!-- Card popup here -->
+    <div id="popupCard">
+        <div class="topRow">
+            <p class="babNum">Bab 1</p>
+            <h3 class="titleBab">Abjad</h4>
+        </div>
+        <div class="contentsBab">
+            <div class="rowContent">
+                <div class="leftCol">
+                    <div class="numRow">1</div>
+                    <div class="levelContent">
+                        <h2 class="levelTitle">Huruf A-B</h2>
+                        <div class="nilaiKuisContainer">
+                            <img src="img/Nilai.png" alt="Kuis Icon" />
+                            <p class="nilaiKuis">Nilai Kuis : 0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightCol">
+                    <button id="startQuiz" class="active" onclick="redirectQuiz(this, event)">Mulai</button>
+                </div>
+            </div>
+            <div class="rowContent">
+                <div class="leftCol">
+                    <div class="numRow">2</div>
+                    <div class="levelContent">
+                        <h2 class="levelTitle">Huruf A-B</h2>
+                        <div class="nilaiKuisContainer">
+                            <img src="img/Nilai.png" alt="Kuis Icon" />
+                            <p class="nilaiKuis">Nilai Kuis : 0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightCol">
+                    <button id="startQuiz">Mulai</button>
+                </div>
+            </div>
+
+            <!-- For Last Row (Kuis Akhir) -->
+            <div class="rowContent">
+                <div class="leftCol">
+                    <div class="numRowLast">
+                        <img src="img/NilaiBullet.png" alt="Icon Nilai" />
+                    </div>
+                    <div class="levelContent">
+                        <h2 class="levelTitle">Kuis Akhir</h2>
+                        <div class="nilaiKuisContainer">
+                            <img src="img/Nilai.png" alt="Kuis Icon" />
+                            <p class="nilaiKuis">Nilai Kuis : 0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightCol">
+                    <button id="startQuiz">Mulai</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="back-nav">
+                <img id="backBtn" src="img/Arrow.png" alt="" />
+                <h4 class="title">Detail Modul</h4>
+            </div>
+            <div class="content-wrapper">
+                <div class="left-col">
+                    <img class="mod-thumbnail" src="img/Mod-Jabar.png" alt="Gambar Modul" />
+                    
+                    <div class="right-inside">
+                        <h3 id="mod-ctg">Bahasa Isyarat</h3>
+                        <h4 class="mod-title">Jawa Barat</h4>
+                        <div class="status">
+                            <div class="status-info">
+                                <img class="img-status" id="difficultyImg" src="img/Level-Cukup Sulit.png" alt="Tingkat Kesulitan" />
+                                <p id="difficulty">Cukup Sulit</p>
+                            </div>
+                            <div class="status-info">
+                                <img class="img-status" id="levelImg" src="img/Level.png" alt="Jumlah Level" />
+                                <p id="level">0/15 Level</p>
+                            </div>
+                            <div class="status-info">
+                                <img class="img-status" id="babImg" src="img/Bab.png" alt="Jumlah Bab" />
+                                <p id="bab">3 Bab</p>
+                            </div>
+                        </div>
+                        <div class="ulasan">
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <p id="ulasanNum">(240 Ulasan)</p>
+                        </div>
+                        <label>
+                            <progress id="progressMod" value="70" max="100">70 %</progress> 70%
+                        </label>
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <h4 class="harga">Rp. 120.000</h4>
+                    <div class="payments">
+                        <img class="pay" src="img/Gopay.png" alt="Gopay" />
+                        <img class="pay" src="img/Visa.png" alt="Visa" />
+                        <img class="pay" src="img/BNI.png" alt="BNI" />
+                        <p>+5 lainnya</p>
+                    </div>
+                    <button id="buy-modul">Beli Modul Ini</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="materials">
+        <div class="materials-container">
+            <!-- Tab links -->
+            <div class="tab">
+                <button class="tablinks active" onclick="openTabs(event, 'babMateri')">Bab dan Materi</button>
+                <button class="tablinks" onclick="openTabs(event, 'tentangModul')">Tentang Modul</button>
+                <button class="tablinks" onclick="openTabs(event, 'ulasan')">Ulasan</button>
+            </div>
+  
+            <div id="babMateri" class="tab-content">
+                <h1 class="title">Tersedia <span id="jumlahBab">8 bab</span></h1>
+                <div class="cards-container">
+                    <div class="card" onclick="toggleOverlayOn()">
+                        <img class="card-thumb" src="img/image-1.png" alt="card thumbnail" />
+                        <div class="info-container">
+                            <h2>Bab 1</h2>
+                            <h4><b>Nama Kota</b></h4>
+                            <div class="bab-status">
+                                <div class="status-item">
+                                    <img id="imgDiff" src="img/level-easy.png" alt="" />
+                                    <p id="infoDiff">Mudah</p>
+                                </div>
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="levelCount">0/5 Level</p>
+                                </div>
+
+                                <div class="status-item">
+                                    <img src="img/Nilai.png" alt="" />
+                                    <p id="nilaiKuis">Nilai kuis : 0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="toggleOverlayOn()">
+                        <img class="card-thumb" src="img/image-1.png" alt="card thumbnail" />
+                        <div class="info-container">
+                            <h2>Bab 1</h2>
+                            <h4><b>Nama Kota</b></h4>
+                            <div class="bab-status">
+                                <div class="status-item">
+                                    <img id="imgDiff" src="img/level-easy.png" alt="" />
+                                    <p id="infoDiff">Mudah</p>
+                                </div>
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="levelCount">0/5 Level</p>
+                                </div>
+
+                                <div class="status-item">
+                                    <img src="img/Nilai.png" alt="" />
+                                    <p id="nilaiKuis">Nilai kuis : 0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="toggleOverlayOn()">
+                        <img class="card-thumb" src="img/image-1.png" alt="card thumbnail" />
+                        <div class="info-container">
+                            <h2>Bab 1</h2>
+                            <h4><b>Nama Kota</b></h4>
+                            <div class="bab-status">
+                                <div class="status-item">
+                                    <img id="imgDiff" src="img/level-easy.png" alt="" />
+                                    <p id="infoDiff">Mudah</p>
+                                </div>
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="levelCount">0/5 Level</p>
+                                </div>
+
+                                <div class="status-item">
+                                    <img src="img/Nilai.png" alt="" />
+                                    <p id="nilaiKuis">Nilai kuis : 0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="toggleOverlayOn()">
+                        <img class="card-thumb" src="img/image-1.png" alt="card thumbnail" />
+                        <div class="info-container">
+                            <h2>Bab 1</h2>
+                            <h4><b>Nama Kota</b></h4>
+                            <div class="bab-status">
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="infoDiff">Mudah</p>
+                                </div>
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="levelCount">0/5 Level</p>
+                                </div>
+
+                                <div class="status-item">
+                                    <img src="img/Nilai.png" alt="" />
+                                    <p id="nilaiKuis">Nilai kuis : 0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="toggleOverlayOn()">
+                        <img class="card-thumb" src="img/image-1.png" alt="card thumbnail" />
+                        <div class="info-container">
+                            <h2>Bab 1</h2>
+                            <h4><b>Nama Kota</b></h4>
+                            <div class="bab-status">
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="infoDiff">Mudah</p>
+                                </div>
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="levelCount">0/5 Level</p>
+                                </div>
+
+                                <div class="status-item">
+                                    <img src="img/Nilai.png" alt="" />
+                                    <p id="nilaiKuis">Nilai kuis : 0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="toggleOverlayOn()">
+                        <img class="card-thumb" src="img/image-1.png" alt="card thumbnail" />
+                        <div class="info-container">
+                            <h2>Bab 1</h2>
+                            <h4><b>Nama Kota</b></h4>
+                            <div class="bab-status">
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="infoDiff">Mudah</p>
+                                </div>
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="levelCount">0/5 Level</p>
+                                </div>
+
+                                <div class="status-item">
+                                    <img src="img/Nilai.png" alt="" />
+                                    <p id="nilaiKuis">Nilai kuis : 0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="toggleOverlayOn()">
+                        <img class="card-thumb" src="img/image-1.png" alt="card thumbnail" />
+                        <div class="info-container">
+                            <h2>Bab 1</h2>
+                            <h4><b>Nama Kota</b></h4>
+                            <div class="bab-status">
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="infoDiff">Mudah</p>
+                                </div>
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="levelCount">0/5 Level</p>
+                                </div>
+
+                                <div class="status-item">
+                                    <img src="img/Nilai.png" alt="" />
+                                    <p id="nilaiKuis">Nilai kuis : 0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="toggleOverlayOn()">
+                        <img class="card-thumb" src="img/image-1.png" alt="card thumbnail" />
+                        <div class="info-container">
+                            <h2>Bab 1</h2>
+                            <h4><b>Nama Kota</b></h4>
+                            <div class="bab-status">
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="infoDiff">Mudah</p>
+                                </div>
+                                <div class="status-item">
+                                    <img src="img/Level.png" alt="" />
+                                    <p id="levelCount">0/5 Level</p>
+                                </div>
+
+                                <div class="status-item">
+                                    <img src="img/Nilai.png" alt="" />
+                                    <p id="nilaiKuis">Nilai kuis : 0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-nav">
+                    <h4 class="page-status">8 dari 8 Bab</h4>
+                    <div class="pagination">
+                        <a href="#" id="arr"><img src="img/Page-left.png" alt=""></a>
+                        <a href="#" id="page" class="active">1</a>
+                        <a href="#" id="arr" class="arrow-active"><img src="img/Page-right.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tentangModul" class="tab-content">
+                <div class="about-container">
+                    <div class="left-about">
+                        <h1>Materi yang akan kamu pelajari dalam Modul Bahasa
+                            <span id="judulModul">Jawa Barat</span>
+                        </h1>
+                        <img src="img/about-mod-thumbnail.png" alt="Thumbnail Modul">
+                    </div>
+    
+                    <div class="right-about">
+                        <div class="materi">
+                            <div class="num">1</div>
+                            <div class="judul-materi">Judul Materi Panjang banget omgomgomoagmowam halo test 123 1</div>
+                        </div>
+                        <div class="materi">
+                            <div class="num">2</div>
+                            <div class="judul-materi">Judul Materi 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ulasan" class="tab-content">
+                <div class="first-row">
+                    <h1 class="ulas-title">Ulasan mereka soal modul ini</h1>
+                    <div class="filter-wrap">
+                        <button class="filter-star" onclick="starFilter(event)">
+                            <img src="img/Star.png" alt="" />
+                            <p>1</p>
+                        </button>
+                        <button class="filter-star" onclick="starFilter(event)">
+                            <img src="img/Star.png" alt="" />
+                            <p>2</p>
+                        </button>
+                        <button class="filter-star" onclick="starFilter(event)">
+                            <img src="img/Star.png" alt="" />
+                            <p>3</p>
+                        </button>
+                        <button class="filter-star" onclick="starFilter(event)">
+                            <img src="img/Star.png" alt="" />
+                            <p>4</p>
+                        </button>
+                        <button class="filter-star" onclick="starFilter(event)">
+                            <img src="img/Star.png" alt="" />
+                            <p>5</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="ulasan-container">
+                    <div class="ulasan">
+                        <div class="top">
+                            <img src="img/ulasan-pic.png" alt="" />
+                            <div class="ulasan-stats">
+                                <h4 class="ulasan-name">Kianna Bator</h4>
+                                <p class="ulasan-time">2 minggu yang lalu</p>
+                            </div>
+                        </div>
+                        <div class="info-ulasan">
+                            <p class="ulasan-text">
+                                Ini Ulasan
+                                <span id="dots">...</span><span id="more">
+                                    More Ulasan
+                                </span>
+                            </p>
+                            <button onclick="" id="btn-more">lebih banyak</button>
+                        </div>
+                        <div class="bintang">
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                        </div>
+                    </div>
+                    <div class="ulasan">
+                        <div class="top">
+                            <img src="img/ulasan-pic.png" alt="" />
+                            <div class="ulasan-stats">
+                                <h4 class="ulasan-name">Kianna Bator</h4>
+                                <p class="ulasan-time">2 minggu yang lalu</p>
+                            </div>
+                        </div>
+                        <div class="info-ulasan">
+                            <p class="ulasan-text">
+                                Ini Ulasan
+                                <span id="dots">...</span><span id="more">
+                                    More Ulasan
+                                </span>
+                            </p>
+                            <button onclick="" id="btn-more">lebih banyak</button>
+                        </div>
+                        <div class="bintang">
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                        </div>
+                    </div>
+                    <div class="ulasan">
+                        <div class="top">
+                            <img src="img/ulasan-pic.png" alt="" />
+                            <div class="ulasan-stats">
+                                <h4 class="ulasan-name">Kianna Bator</h4>
+                                <p class="ulasan-time">2 minggu yang lalu</p>
+                            </div>
+                        </div>
+                        <div class="info-ulasan">
+                            <p class="ulasan-text">
+                                Ini Ulasan
+                                <span id="dots">...</span><span id="more">
+                                    More Ulasan
+                                </span>
+                            </p>
+                            <button onclick="" id="btn-more">lebih banyak</button>
+                        </div>
+                        <div class="bintang">
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                        </div>
+                    </div>
+                    <div class="ulasan">
+                        <div class="top">
+                            <img src="img/ulasan-pic.png" alt="" />
+                            <div class="ulasan-stats">
+                                <h4 class="ulasan-name">Kianna Bator</h4>
+                                <p class="ulasan-time">2 minggu yang lalu</p>
+                            </div>
+                        </div>
+                        <div class="info-ulasan">
+                            <p class="ulasan-text">
+                                Ini Ulasan
+                                <span id="dots">...</span><span id="more">
+                                    More Ulasan
+                                </span>
+                            </p>
+                            <button onclick="" id="btn-more">lebih banyak</button>
+                        </div>
+                        <div class="bintang">
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                        </div>
+                    </div>
+                    <div class="ulasan">
+                        <div class="top">
+                            <img src="img/ulasan-pic.png" alt="" />
+                            <div class="ulasan-stats">
+                                <h4 class="ulasan-name">Kianna Bator</h4>
+                                <p class="ulasan-time">2 minggu yang lalu</p>
+                            </div>
+                        </div>
+                        <div class="info-ulasan">
+                            <p class="ulasan-text">
+                                Ini Ulasan
+                                <span id="dots">...</span><span id="more">
+                                    More Ulasan
+                                </span>
+                            </p>
+                            <button onclick="" id="btn-more">lebih banyak</button>
+                        </div>
+                        <div class="bintang">
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                        </div>
+                    </div>
+                    <div class="ulasan">
+                        <div class="top">
+                            <img src="img/ulasan-pic.png" alt="" />
+                            <div class="ulasan-stats">
+                                <h4 class="ulasan-name">Kianna Bator</h4>
+                                <p class="ulasan-time">2 minggu yang lalu</p>
+                            </div>
+                        </div>
+                        <div class="info-ulasan">
+                            <p class="ulasan-text">
+                                Ini Ulasan
+                                <span id="dots">...</span><span id="more">
+                                    More Ulasan
+                                </span>
+                            </p>
+                            <button onclick="" id="btn-more">lebih banyak</button>
+                        </div>
+                        <div class="bintang">
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                        </div>
+                    </div>
+                    <div class="ulasan">
+                        <div class="top">
+                            <img src="img/ulasan-pic.png" alt="" />
+                            <div class="ulasan-stats">
+                                <h4 class="ulasan-name">Kianna Bator</h4>
+                                <p class="ulasan-time">2 minggu yang lalu</p>
+                            </div>
+                        </div>
+                        <div class="info-ulasan">
+                            <p class="ulasan-text">
+                                Ini Ulasan
+                                <span id="dots">...</span><span id="more">
+                                    More Ulasan
+                                </span>
+                            </p>
+                            <button onclick="" id="btn-more">lebih banyak</button>
+                        </div>
+                        <div class="bintang">
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                            <img src="img/Star.png" alt="Bintang" />
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="ulasan-nav">
+                    <h4 class="ulasan-status">12 dari 36 Ulasan</h4>
+                    <div class="ulasan-pagination">
+                        <a href="#" id="arr"><img src="img/Page-left.png" alt=""></a>
+
+                        <a href="#" id="page" class="active">1</a>
+                        <a href="#" id="page">2</a>
+
+                        <a href="#" id="arr" class="arrow-active"><img src="img/Page-right.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-bar">
+        <div class="bot-container">
+            <div class="left-col-copy">
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="esyarat logo">
+                </a>
+    
+                <div class="copy">© 2022 esyarat.com | site crafted by Sigma for Probation event</div>
+            </div>
+            
+            <div class="socials">
+                <img src="img/insta-logo.png" alt="insta logo">
+                <a href="" class="facebook">Instagram</a>
+                <div class="sep"> | </div>
+
+                <img src="img/fb-logo.png" alt="fb logo">
+                <a href="" class="facebook">Facebook</a>
+                <div class="sep"> | </div>
+
+                <img src="img/twitter-logo.png" alt="twtitter logo">
+                <a href="" class="facebook">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="js/detailmodul.js"></script>
+</body>
+</html>

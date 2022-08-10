@@ -13,18 +13,18 @@
             <div class="left-col">
                 <div class="card-container">
                     <div class="text-card-container">
-                        <div class="text-content fade" style="margin-left:.5em">
-                            Belajar dan latih<br>Bahasa Isyarat kamu<br>disini
+                        <div class="text-content fade first">
+                            Belajar dan latih<br />Bahasa Isyarat kamu<br />disini
                         </div>
                         <span class="dot1"></span> 
 
-                        <div class="text-content fade">
-                            Bahasa isyarat dari<br>berbagai daerah dapat<br>dipelajari
+                        <div class="text-content fade second">
+                            Bahasa isyarat dari<br />berbagai daerah dapat<br />dipelajari
                         </div>
                         <span class="dot2"></span> 
 
-                        <div class="text-content fade" style="margin-left:1em">
-                            Pembelajaran<br>dapat dilakukan di<br>semua device
+                        <div class="text-content fade third">
+                            Pembelajaran<br />dapat dilakukan di<br />semua device
                         </div>
                         <span class="dot3"></span> 
                     </div>
@@ -38,40 +38,40 @@
             <div class="right-col">
                 <a href="#" class="logo">
                     <span>
-                        <img src="img/logo.png" alt="esyarat logo">
+                        <img src="img/logo.png" alt="esyarat logo" />
                     </span>
                 </a>
 
-                <h1 class="welcome">Daftar untuk belajar<br>
+                <h1 class="welcome">Daftar untuk belajar<br />
                 Bahasa isyarat bersama kami</h1>
 
                 <div class="daftar-card">
                     <!-- Form survey -->
                     <div class="survey-container">
-                        <h1 class="judul">Apakah kamu sudah pernah<br>
+                        <h1 class="judul">Apakah kamu sudah pernah<br />
                         mempelajari bahasa isyarat?
                         </h1>
                         <form action="" onsubmit="return false" class="survey-form" id="survey-form">
                             <div class="form-field">
                                 <label class="form-control">
-                                    <input type="radio" name="radio" value="Belum, ini pertama kali" required/>
+                                    <input type="radio" name="radio" value="Belum, ini pertama kali" required />
                                     Belum, ini pertama kali
                                     <span class="checkmark"></span>
                                 </label>
 
                                 <label class="form-control">
-                                    <input type="radio" name="radio" value="Pernah tetapi hanya beberapa kali" required/>
+                                    <input type="radio" name="radio" value="Pernah tetapi hanya beberapa kali" required />
                                     Pernah tetapi hanya beberapa kali<span class="inv">-----------</span>
                                     <span class="checkmark"></span>
                                 </label>
 
                                 <label class="form-control">
-                                    <input type="radio" name="radio" value="Masih hingga saat ini" required/>
+                                    <input type="radio" name="radio" value="Masih hingga saat ini" required />
                                     Masih hingga saat ini
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <input type="submit" id="btn-selanjutnya" value="Selanjutnya">
+                            <input type="submit" id="btn-selanjutnya" value="Selanjutnya" />
                         </form>
                     </div>
 
@@ -79,77 +79,58 @@
                     <div class="daftar-container">
                         <form action="" onsubmit="return false" class="daftar-form" id="daftar-form">
                             <div class="form-field">
-                                <label for="">Nama</label>
-                                <input type="text" name="text" id="id-nama" placeholder="Masukkan nama kamu" required>
+                                <label for="id-nama">Nama</label>
+                                <input type="text" name="text" id="id-nama" placeholder="Masukkan nama kamu" required />
                             </div>
                             <div class="form-field">
-                                <label for="">Alamat email</label>
-                                <input type="text" name="text" id="id-email" placeholder="Masukkan email kamu" required>
+                                <label for="username">Username</label>
+                                <input type="text" name="text" id="username" placeholder="Masukkan username" required />
                             </div>
                             <div class="form-field">
-                                <label for="" class="idn-label">No. Telpon</label>
-                                <input type="text" name="text" id="id-telp" class="indo" placeholder="Masukkan nomor aktif" required>
+                                <label for="id-email">Alamat email</label>
+                                <input type="text" name="text" id="id-email" placeholder="Masukkan email kamu" required />
                             </div>
-                            <p class="note">*Untuk kode verifikasi</p>
+                            <div class="form-field">
+                                <label for="id-telp" class="idn-label">No. Telpon</label>
+                                <input type="text" name="text" id="id-telp" class="indo" placeholder="Masukkan nomor aktif" required />
+                            </div>
+                            <!-- <p class="note">*Untuk kode verifikasi</p> For Later -->
 
-                            <input type="submit" id="btn-send-verf" value="Kirim kode verifikasi">
+                            <input type="submit" id="btn-send-verf" value="Selanjutnya" />
                             <p class="atau">atau</p>
-                            <input type="button" id="btn-reg-google" value="Daftar melalui Google">
+                            <input type="button" id="btn-reg-google" value="Daftar melalui Google" />
                         </form>  
                     </div>
 
-                    <!-- Form Kode Verifikasi -->
+                    <!-- Feedback tell user to Verifikasi -->
+                    <div class="feedback">
+                        <img src="img/feedback-email.png" alt="feedback checklist image" />
+                        <h1 class="feedback">Cek email kamu untuk<br />verifikasi akunmu</h1>
+                        <p class="feedback">Cek email <span id="email-fp"></span> dan verifikasi untuk dapat melanjutkan</p>
+                        
+                        <a href="https://mail.google.com/">
+                            <button id="btn-verf-redirect">Verifikasi</button>
+                        </a>
+                    </div>
+
+                    <!-- Form Kode Verifikasi (Phone OTP) For Later
                     <div class="veri-container">
                         <form onsubmit="return false" class="content-area" id="verf-form">
                             <h4>Masukkan kode verifikasi yang dikirim pada</h4>
                             <h4 class="phone-num">+62 857 499999</h4>
                             <div class="verf-field">
-                                <input name='code' class='code-input' required/>
-                                <input name='code' class='code-input' required/>
-                                <input name='code' class='code-input' required/>
-                                <input name='code' class='code-input' required/>
-                                <input name='code' class='code-input' id="last-field" required/>
+                                <input name='code' class='code-input' required />
+                                <input name='code' class='code-input' required />
+                                <input name='code' class='code-input' required />
+                                <input name='code' class='code-input' required />
+                                <input name='code' class='code-input' id="last-field" required />
                             </div>
 
-                            <input type="submit" id="submi-code-verf" value="Submit">
-                            <input type="button" id="resend-verf" value="Kirim ulang kode (30 detik)">
+                            <input type="submit" id="submi-code-verf" value="Submit" />
+                            <input type="button" id="resend-verf" value="Kirim ulang kode (30 detik)" />
                         </form>
                     </div>
-
-                    <!-- Form buat password -->
-                    <div class="pass-container">
-                        <form action="" onsubmit="return false" class="pass-form" id="pass-form">
-                            <div class="form-field">
-                                <label for="">Password</label>
-                                <input type="text" name="text" id="id-make-pass" placeholder="Buat password kamu" required>
-                            </div>
-                            <div class="form-field">
-                                <label for="">Konfirmasi password</label>
-                                <input type="text" name="text" id="id-conf-pass" placeholder="Masukkan ulang password kamu" required>
-                            </div>
-                            
-                            <div id="message">
-                                <p id="length" class="invalid">
-                                    Password ada 6 karakter atau lebih
-                                </p>
-                                <p id="num-cap-letter" class="invalid">
-                                    Password harus campuran angka, huruf, dan huruf kapital
-                                </p>
-                            </div>
-                            <input type="submit" id="btn-make-pass" value="Buat Password">
-                        </form>
-                    </div>
-
-                    <!-- Feedback berhasil -->
-                    <div class="feedback">
-                        <img src="img/feedback-checklist.png" alt="feedback checklist image">
-                        <h1 class="feedback">Pendaftaran<br>Akunmu Berhasil!</h1>
-                        <p class="feedback">Selamat akunmu berhasil dibuat, masuk<br>dengan akunmu untuk belajar bersama kami</p>
-
-                        <button id="btn-to-akun">
-                            <a href="">Masuk ke akun</a>
-                        </button>
-                    </div>
+                    -->
                 </div>
                 
                 <p class="ada-akun">Sudah punya akun?
@@ -165,22 +146,22 @@
         <div class="bot-container">
             <div class="left-col-copy">
                 <a href="#" class="logo">
-                    <img src="img/logo.png" alt="esyarat logo">
+                    <img src="img/logo.png" alt="esyarat logo" />
                 </a>
     
                 <div class="copy">© 2022 esyarat.com | site crafted by Sigma for Probation event</div>
             </div>
             
             <div class="socials">
-                <img src="img/insta-logo.png" alt="insta logo">
+                <img src="img/insta-logo.png" alt="insta logo" />
                 <a href="" class="facebook">Instagram</a>
                 <div class="sep"> | </div>
 
-                <img src="img/fb-logo.png" alt="fb logo">
+                <img src="img/fb-logo.png" alt="fb logo" />
                 <a href="" class="facebook">Facebook</a>
                 <div class="sep"> | </div>
 
-                <img src="img/twitter-logo.png" alt="twtitter logo">
+                <img src="img/twitter-logo.png" alt="twtitter logo" />
                 <a href="" class="facebook">Twitter</a>
             </div>
         </div>

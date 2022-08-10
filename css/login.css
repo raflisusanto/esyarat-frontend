@@ -45,6 +45,14 @@ div.left-col .card-container video.prev {
   border-radius: 18px;
 }
 
+div.left-col .card-container div.text-card-container .first {
+  margin-left: .5em;
+}
+
+div.left-col .card-container div.text-card-container .third {
+  margin-left: 1em;
+}
+
 div.left-col .card-container div.text-card-container .text-content {
   color: white;
   font-size: 35px;
@@ -224,7 +232,7 @@ div.right-col div.login-card .login-container .form-field img#togglePass.toggleP
   position: absolute;
   cursor: pointer;
   left: 22.5em;
-  bottom: 15em;
+  bottom: 15.2em;
 }
 
 div.right-col div.login-card .login-container a.forgot-pass {
@@ -317,6 +325,10 @@ div.bottom-bar .bot-container {
   padding: 28px 24px;
 }
 
+div.bottom-bar .bot-container .copy {
+  color: #929292;
+}
+
 div.bottom-bar .bot-container .left-col-copy {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,6 +360,7 @@ div.bottom-bar .bot-container .socials {
 div.bottom-bar .bot-container a {
   margin-right: 1em;
   text-decoration: none;
+  color: #5E5E5E;
 }
 
 div.bottom-bar .bot-container img {
@@ -387,7 +400,7 @@ div.bottom-bar .bot-container div.sep {
             flex-direction: column;
   }
   .bot-container a.logo {
-    margin-bottom: .3em;
+    margin-bottom: 1em;
   }
   .bot-container .left-col-copy {
     margin-bottom: 1.9em;

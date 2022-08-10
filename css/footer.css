@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap");
+body {
+  background: #FAFAFA;
+  margin: 0;
+  font-family: 'Nunito', 'Inter';
+}
+
+div.bottom-bar {
+  background-color: white;
+  bottom: 0;
+  width: 100%;
+}
+
+div.bottom-bar .bot-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  padding: 28px 24px;
+}
+
+div.bottom-bar .bot-container .copy {
+  color: #929292;
+}
+
+div.bottom-bar .bot-container .left-col-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  margin-left: 2em;
+}
+
+div.bottom-bar .bot-container .left-col-copy .logo {
+  margin-right: 1.5em;
+}
+
+div.bottom-bar .bot-container .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 2em;
+}
+
+div.bottom-bar .bot-container a {
+  margin-right: 1em;
+  text-decoration: none;
+  color: #5E5E5E;
+}
+
+div.bottom-bar .bot-container img {
+  image-rendering: -webkit-optimize-contrast;
+  margin-right: .6em;
+}
+
+div.bottom-bar .bot-container div.sep {
+  margin-right: 1em;
+  color: #D9D9D9;
+}
+
+@media only screen and (max-width: 1260px) {
+  .bot-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bot-container a.logo {
+    margin-bottom: 1em;
+  }
+  .bot-container .left-col-copy {
+    margin-bottom: 1.9em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bot-container .socials {
+    margin-left: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bot-container .left-col-copy {
+    color: #929292;
+    margin-bottom: 2.5em;
+  }
+  .bot-container .left-col-copy div.copy {
+    margin-right: 1.5em;
+    font-size: 15px;
+    text-align: center;
+  }
+  .bot-container .socials {
+    font-size: 14px;
+    margin-left: 3em;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

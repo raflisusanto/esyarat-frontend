@@ -6,23 +6,20 @@ surveySubmit.addEventListener('click', checkInputSurvey);
 let daftarSubmit = document.getElementById('btn-send-verf');
 daftarSubmit.addEventListener('click', checkInputDaftar);
 
-let codeSubmit = document.getElementById('submi-code-verf');
-codeSubmit.addEventListener('click', checkInputCode);
-
-let makePassSubmit = document.getElementById('btn-make-pass');
-makePassSubmit.addEventListener('click', checkInputPass);
-
+/*
 // Trigger function for verification code form field
 verfCard();
 
 let length = document.getElementById("length");
 let letter = document.getElementById("num-cap-letter");
+let counter = 30;
+let phoneNum = '';
+*/
 
 function checkInputSurvey() {
     let surveyInput = document.querySelectorAll('#survey-form input[name="radio"]:checked');
 
     if (surveyInput[0] == undefined) {
-        // Aktifin border merah or sumthin
         return false;
     } else {
         // Go to daftar card
@@ -39,7 +36,9 @@ function checkInputDaftar() {
     if (daftarInput[0].value != "" && daftarInput[1].value.match(emailRegex) 
     && daftarInput[2].value.match(phoneRegex)) {
         // Go to verification card
-        fadeToCode();
+        phoneNum = daftarInput[2].value;
+        // fadeToCode();
+        fadeToFeedback()
     } else {
         // Aktifin border merah or sumthin
         daftarInput[0].style.border = '1px solid #F14848';
@@ -50,6 +49,7 @@ function checkInputDaftar() {
     }
 }
 
+/* PENDING
 // For verification card
 function verfCard() {
     const inputElements = [...document.querySelectorAll('input.code-input')]
@@ -98,44 +98,28 @@ function checkInputCode() {
     }
 }
 
-// ## Checking Pass Validation ##
-let myInput = document.getElementById("id-make-pass");
+// Function for countdown resend verf button
+function countdownButton() {
+    let count = document.getElementById('resend-verf');
+    count.className = '';
 
-// Check here
-myInput.onkeyup = function() {
-    let upperCaseLetters = /[A-Z]/g;
-    let lowerCaseLetters = /[a-z]/g;
-    let numbers = /[0-9]/g;
-    if (myInput.value.match(upperCaseLetters) && myInput.value.match(lowerCaseLetters) &&
-    myInput.value.match(numbers)) {
-        letter.classList.remove("invalid");
-        letter.classList.add("valid");
-    }
-
-    if (myInput.value.length > 6) {
-        length.classList.remove("invalid");
-        length.classList.add("valid");
+    if (counter > 0) {
+        count.value = 'Kirim ulang kode (' + counter + ' detik)'
+        counter--;
+        setTimeout(countdownButton, 1000);
+    } else if (counter == 0) {
+        count.className = 'active';
+        count.value = 'Kirim ulang kode';
+        counter = 30;
+        onResend();
     }
 }
 
-function checkInputPass() {
-    let passInput = document.querySelectorAll('#pass-form input[name="text"]');
-
-    if (passInput == undefined) {
-        return false;
-    }
-
-    if (passInput[0].value == passInput[1].value && letter.classList.contains("valid") && 
-    length.classList.contains("valid")) {
-        fadeToFeedback();
-    } else {
-        // Add red border
-        passInput[0].style.border = '1px solid #F14848';
-        passInput[1].style.border = '1px solid #F14848';
-        alert("Password belum valid");
-        return false;
-    }
+function onResend() {
+    let count = document.getElementById('resend-verf');
+    count.addEventListener('click', countdownButton);
 }
+*/
 
 function fadeToDaftar() {
     let surveyContainer = document.getElementsByClassName('survey-container');
@@ -145,30 +129,30 @@ function fadeToDaftar() {
     daftarContainer[0].style.display = "block";
 }
 
+/* PENDING
 function fadeToCode() {
     let daftarContainer = document.getElementsByClassName('daftar-container');
     let verfContainer = document.getElementsByClassName('veri-container');
+    let phoneHeader = document.getElementsByClassName('phone-num');
+    let bottomAdaAkun = document.getElementsByClassName('ada-akun');
 
+    phoneHeader[0].innerHTML = '+62 ' + phoneNum;
     daftarContainer[0].style.display = "none";
+    bottomAdaAkun[0].style.display = "none";
     verfContainer[0].style.display = "block";
-}
 
-function fadeToPass() {
-    let verfContainer = document.getElementsByClassName('veri-container');
-    let passContainer = document.getElementsByClassName('pass-container');
-
-    verfContainer[0].style.display = "none";
-    passContainer[0].style.display = "block";
+    countdownButton();
 }
+*/
 
 function fadeToFeedback() {
-    let passContainer = document.getElementsByClassName('pass-container');
     let feedbackContainer = document.getElementsByClassName('feedback');
-    let bottomAdaAkun = document.getElementsByClassName('ada-akun');
     let welcomeTitle = document.getElementsByClassName('welcome');
+    let daftarContainer = document.getElementsByClassName('daftar-container');
+    let bottomAdaAkun = document.getElementsByClassName('ada-akun');
 
-    passContainer[0].style.display = "none";
-    bottomAdaAkun[0].style.display = "none";
     welcomeTitle[0].style.display = "none"
+    daftarContainer[0].style.display = "none";
+    bottomAdaAkun[0].style.display = "none";
     feedbackContainer[0].style.display = "block";
 }

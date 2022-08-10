@@ -39,6 +39,13 @@ div.left-col {
         }
     
         div.text-card-container {
+            .first {
+                margin-left:.5em
+            }
+
+            .third {
+                margin-left: 1em
+            }
             .text-content {
                 color: white;
                 font-size: 35px;
@@ -214,7 +221,6 @@ div.right-col {
                 background-color: white;
                 border-radius: 50%;
                 border: 2px solid #B4B4B4;
-                transition-duration: 0.4s;
             }
 
             /* When the radio button is checked, add color background */
@@ -494,10 +500,14 @@ div.right-col {
 
             cursor: pointer;
         }  
+
+        input#resend-verf.active {
+            color: #1F7973;
+            background-color: #EDF8F7;
+        }
     }
 
     div.pass-container {
-        display: none;
         background-color: white;
         padding: 16px 30px;
         border-radius: 8px;
@@ -583,24 +593,28 @@ div.right-col {
             font-weight: 600;
         }
 
-        button {
-            background-color: #18625D;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
+        img {
+            margin: 2em;
+        }
+
+        a {
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            font-family: 'Nunito';
-            border-radius: 5px;
-            width: 15em;
-
-            margin-top: 2em;
-
-            a {
-                text-decoration: none;
+            color: white;
+            button {
+                background-color: #18625D;
+                border: none;
                 color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: 'Nunito';
+                border-radius: 5px;
+                width: 15em;
+                cursor: pointer;
+    
+                margin-top: 2em;
             }
         }
     }
@@ -618,6 +632,10 @@ div.bottom-bar {
         justify-items: center;
 
         padding: 28px 24px;
+
+        .copy {
+            color: #929292;
+        }
 
         .left-col-copy {
             display: flex;
@@ -638,6 +656,7 @@ div.bottom-bar {
         a {
             margin-right: 1em;
             text-decoration: none;
+            color: #5E5E5E;
         }
 
         img {
@@ -675,7 +694,7 @@ div.bottom-bar {
         display: flex;
         flex-direction: column;
         a.logo {
-            margin-bottom: .3em;
+            margin-bottom: 1em;
         }
         .left-col-copy {
             margin-bottom: 1.9em;
