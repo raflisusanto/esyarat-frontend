@@ -26,6 +26,7 @@ function checkInputLogin() {
 
     // Check data login here
     if (loginInput[0].value != "" && loginInput[1].value != "") {
+      /*
       fetch(BASE_URL + "api/auth/signin", {
         method: 'POST',
         body: JSON.stringify({
@@ -48,6 +49,8 @@ function checkInputLogin() {
             return false;
           }
       })
+      */
+      window.location.href = "home.html";
     } else {
       loginInput[0].style.border = '1px solid #F14848';
       loginInput[1].style.border = '1px solid #F14848';
